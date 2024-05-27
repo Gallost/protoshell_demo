@@ -1,0 +1,30 @@
+:root {
+    --green-0: #33B540;
+}
+body {
+    background-color: #111111;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+.centered-flex-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+}
+.green-0 {
+    color: var(--green-0);
+}
+.title {
+    font-size: 96px;
+    font-weight: bold;
+}
+.button-primary {
+    background: var(--green-0);
+    border-radius: 5px;
+    min-width: 180px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
