@@ -1,5 +1,7 @@
 :root {
     --green-0: #33B540;
+    --green-1: #0C8F19;
+    --dark-6: #2C2C2C;
 }
 body {
     background-color: #111111;
@@ -10,7 +12,6 @@ body {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    height: 100%;
 }
 .green-0 {
     color: var(--green-0);
@@ -19,12 +20,21 @@ body {
     font-size: 96px;
     font-weight: bold;
 }
-.button-primary {
-    background: var(--green-0);
+.button-primary.scaffold {
+    background: var(--green-1);
+    border: 1px solid var(--green-1);
     border-radius: 5px;
     min-width: 180px;
     min-height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
+}
+.button-primary.scaffold:hover {
+    background: transparent;
+}
+.button-primary.container {
+    transform: translateX(50%) translateY(70%);
+}
+.button-primary.text {
+    display: inline-block;
+    transform: translateX(-50%);
 }

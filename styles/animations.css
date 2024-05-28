@@ -1,0 +1,110 @@
+@import "main.css";
+
+/* TRACING SVG */
+.tracing-svg {
+    padding-top: 5px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: trace 8s forwards;
+}
+.tracing-svg.erase-ltor {
+    animation: trace 6s forwards, erase-ltor 1s ease-in 1s forwards;
+}
+.tracing-svg.erase-btot {
+    animation: trace 6s forwards, erase-btot 1s ease-in 1s forwards;
+}
+@keyframes trace {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes erase-ltor {
+    from {
+        clip-path: inset(0% 0% 0% 0%);
+    }
+    to {
+        clip-path: inset(0% 0% 0% 100%);
+    }
+}
+@keyframes erase-btot {
+    from {
+        clip-path: inset(0% 0% 0% 0%);
+    }
+    to {
+        clip-path: inset(0% 0% 100% 0%);
+    }
+}
+#title-1 {
+    animation: appear 1s ease-in 1s forwards;
+    clip-path: inset(0% 100% 0% 0%);
+    font-size: 101px; font-weight: bold; position: absolute; top: 0; left: 0; margin-left: -9px;
+}
+#title-2 {
+    animation: appear 1s ease-in 1s forwards;
+    clip-path: inset(80% 0% 0% 0%);
+    font-size: 101px; font-weight: bold; position: absolute; top: 0; left: 3.3px; margin-left: -9px;
+}
+@keyframes appear {
+    to {
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+#subtitle {
+    animation: drop-and-appear 1s forwards;
+    position: relative;
+    font-size: 24px;
+    font-weight: 200;
+    margin-left: -3px;
+}
+@keyframes drop-and-appear {
+    from {
+        clip-path: inset(100% 0% 0% 0%);
+        top: -24px;
+    }
+    to {
+        clip-path: inset(0% 0% 0% 0%);
+        top: 0px;
+    }
+}
+
+/* NAVBAR ANIMATIONS */
+
+/* adjust the look of the buttons */
+.navbar-mode #nav-buttons {
+    animation-name: nav-buttons;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.navbar-mode .button-primary.scaffold {
+    animation-name: navbar-scaffold;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.navbar-mode .button-primary.container {
+    animation-name: navbar-container;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.navbar-mode .button-primary.text {
+    animation-name: navbar-text;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes navbar-scaffold {
+    to {
+        background: var(--dark-6);
+        border: 0px;
+        color: var(--green-0);
+    }
+}
+@keyframes navbar-container {
+    to {
+        transform: translateX(0%) translateY(70%);
+    }
+}
+@keyframes navbar-text {
+    to {
+        transform: translateX(0%);
+        padding-left: 18px;
+    }
+}
