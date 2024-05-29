@@ -2,10 +2,10 @@
 
 /* TRACING SVG */
 .tracing-svg {
-    padding-top: 5px;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: trace 8s forwards;
+    height: 100%;
 }
 .tracing-svg.erase-ltor {
     animation: trace 6s forwards, erase-ltor 1s ease-in 1s forwards;
@@ -34,15 +34,19 @@
         clip-path: inset(0% 0% 100% 0%);
     }
 }
-#title-1 {
+.appearing-svg {
     animation: appear 1s ease-in 1s forwards;
-    clip-path: inset(0% 100% 0% 0%);
-    font-size: 101px; font-weight: bold; position: absolute; top: 0; left: 0; margin-left: -9px;
+    height: 100%;
 }
-#title-2 {
-    animation: appear 1s ease-in 1s forwards;
-    clip-path: inset(80% 0% 0% 0%);
-    font-size: 101px; font-weight: bold; position: absolute; top: 0; left: 3.3px; margin-left: -9px;
+#filled-Proto {
+    clip-path: inset(0% 100% 0% 0%);
+    position: absolute;
+    left: 0;
+}
+#filled-Shell {
+    clip-path: inset(100% 0% 0% 0%);
+    position: absolute;
+    left: 0;
 }
 @keyframes appear {
     to {
