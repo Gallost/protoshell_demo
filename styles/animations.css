@@ -1,41 +1,18 @@
 @import "main.css";
 
-/* TRACING SVG */
 .tracing-svg {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: trace 8s forwards;
     height: 100%;
 }
-.tracing-svg.erase-ltor {
-    animation: trace 6s forwards, erase-ltor 1s 1s forwards;
-}
-.tracing-svg.erase-btot {
-    animation: trace 6s forwards, erase-btot 1s 1s forwards;
-}
 @keyframes trace {
     to {
         stroke-dashoffset: 0;
     }
 }
-@keyframes erase-ltor {
-    from {
-        clip-path: inset(0% 0% 0% 0%);
-    }
-    to {
-        clip-path: inset(0% 0% 0% 100%);
-    }
-}
-@keyframes erase-btot {
-    from {
-        clip-path: inset(0% 0% 0% 0%);
-    }
-    to {
-        clip-path: inset(0% 0% 100% 0%);
-    }
-}
 .appearing-svg {
-    animation: appear 1s 1s forwards;
+    animation: appear 1.8s 1.3s forwards;
     height: 100%;
 }
 #filled-Proto {
@@ -58,7 +35,6 @@
     position: relative;
     font-size: 24px;
     font-weight: 200;
-    margin-left: -3px;
 }
 @keyframes drop-and-appear {
     from {
@@ -68,47 +44,5 @@
     to {
         clip-path: inset(0% 0% 0% 0%);
         top: 0px;
-    }
-}
-
-/* NAVBAR ANIMATIONS */
-
-/* adjust the look of the buttons */
-.navbar-mode #nav-buttons {
-    animation-name: nav-buttons;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-.navbar-mode .button-primary.scaffold {
-    animation-name: navbar-scaffold;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-.navbar-mode .button-primary.container {
-    animation-name: navbar-container;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-.navbar-mode .button-primary.text {
-    animation-name: navbar-text;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-@keyframes navbar-scaffold {
-    to {
-        background: var(--dark-6);
-        border: 0px;
-        color: var(--green-0);
-    }
-}
-@keyframes navbar-container {
-    to {
-        transform: translateX(0%) translateY(70%);
-    }
-}
-@keyframes navbar-text {
-    to {
-        transform: translateX(0%);
-        padding-left: 18px;
     }
 }
