@@ -8,10 +8,10 @@
     height: 100%;
 }
 .tracing-svg.erase-ltor {
-    animation: trace 6s forwards, erase-ltor 1s ease-in 1s forwards;
+    animation: trace 6s forwards, erase-ltor 1s 1s forwards;
 }
 .tracing-svg.erase-btot {
-    animation: trace 6s forwards, erase-btot 1s ease-in 1s forwards;
+    animation: trace 6s forwards, erase-btot 1s 1s forwards;
 }
 @keyframes trace {
     to {
@@ -35,7 +35,7 @@
     }
 }
 .appearing-svg {
-    animation: appear 1s ease-in 1s forwards;
+    animation: appear 1s 1s forwards;
     height: 100%;
 }
 #filled-Proto {
