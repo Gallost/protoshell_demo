@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
             end: "+=150%",  // Scroll length is 1.5x the element height
             pin: true,
             scrub: true,
-            markers: true
+            // markers: true   // For debugging
         }
         })
         .to("#title-splash-wrapper", {
@@ -41,6 +41,6 @@ window.addEventListener("load", () => {
         }, 0)
         .to("#circle-cutout > div", {
             backgroundColor: "white",
-            duration: 0.1
+            duration: 0.3
         }, 0)
 });
