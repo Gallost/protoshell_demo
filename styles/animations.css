@@ -1,5 +1,14 @@
 @import "main.css";
 
+/* disable scroll initially for the tracing animation to finish */
+body {
+    overflow: hidden;
+    animation: enable-scroll 0s 2s forwards;
+}
+@keyframes enable-scroll {
+    to {overflow: visible}
+}
+
 .tracing-svg {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
